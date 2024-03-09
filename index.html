@@ -61,8 +61,11 @@
   <!-- Gitalk -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
+  <!--md5-->
+  <script src="https://cdn.bootcdn.net/ajax/libs/blueimp-md5/2.18.0/js/md5.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
  
+  <script>
     const gitalk = new Gitalk({
       clientID: 'eadbab986e277470a5f5',
       clientSecret: '788d3fba79843b36d42c09426a11e3a75e9d7d0a',
@@ -71,7 +74,7 @@
       admin: ['zhihuinang'],
       // facebook-like distraction free mode
       distractionFreeMode: false,
-      id: decodeURI(location.pathname)
+      id: md5(location.pathname)
     })
   </script>
   <!-- Pangu -->
