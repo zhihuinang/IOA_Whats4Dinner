@@ -36,7 +36,7 @@
         hideOtherSidebarContent: true,
         // To avoid search index collision
         // between multiple websites under the same domain
-        namespace: 'ieee.icu',
+        namespace: 'ioa_whats4dinner',
       },
       plugins: [
         // remove url parameters before loading Gitalk
@@ -47,6 +47,7 @@
             if (splited.length >= 2 && !splited[1].startsWith("code=")) {
               location.href = location.href.split('?')[0]
             }
+            
           });
         }
       ],
@@ -74,7 +75,7 @@
       admin: ['zhihuinang'],
       // facebook-like distraction free mode
       distractionFreeMode: false,
-      id: md5(location.href)
+      id: md5(location.hash)
     })
   </script>
   <!-- Pangu -->
